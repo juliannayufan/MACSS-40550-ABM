@@ -9,6 +9,8 @@ class PDModel(mesa.Model):
     payoff = {("C", "C"): 1, ("C", "D"): 0, ("D", "C"): 1.6, ("D", "D"): 0}
     ## Initialize model, inheriting seed property from parent class
     def __init__(self, width=40, height=40, order="Simultaneous", payoffs=None, seed=None):
+        if seed is not None:
+            seed = int(seed)
         super().__init__(rng=seed)
         ## Define Acivation order
         self.order = order
