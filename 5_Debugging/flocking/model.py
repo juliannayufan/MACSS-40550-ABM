@@ -19,7 +19,9 @@ class BoidFlockers(Model):
         match=0.05,
         seed=None,
     ):
-        super().__init__(seed=seed)
+        if seed is not None:
+            seed = int(seed)
+        super().__init__(rng=seed)
         # Set up the continuous space
         self.space = ContinuousSpace(
             [[0, width], [0, height]],
