@@ -8,7 +8,7 @@ An implementation of a classic model of a virus spreading through a social netwo
 
 Currently, the model only places agents in one kind of network\: an Erdos-Renyi random network. Your job is to modify the code in the model to accommodate at least one other network structure. Add code to the model file allowing a user to select between different network types, and add functionality to the GUI to allow users to select between the options you define.
 
-Then, if you have time, run a short batch run of the model varying network type and produce a wuick descriptive statistic or visualization about the difference in a variable of your choice across network shapes.
+Then, if you have time, run a short batch run of the model varying network type and produce a quick descriptive statistic or visualization about the difference in a variable of your choice across network shapes.
 
 ## How to Run
 
