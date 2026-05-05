@@ -37,7 +37,9 @@ class VirusOnNetwork(Model):
         gain_resistance_chance=0.5,
         seed=None,
     ):
-        super().__init__(seed=seed)
+        if seed is not None:
+            seed = int(seed)
+        super().__init__(rng=seed)
         random.seed(seed)
         # Set up network: number of nodes, base probability of connection, type of network (binary or weighted)
         self.num_nodes = num_nodes
